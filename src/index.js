@@ -22,4 +22,4 @@ app.get('/about', (req,res)=> res.send('<h1>Hello Im A FE Developer!</h1>'))
 app.get('/address', (req,res)=> res.send('<h1>Hue - VietNam!</h1>'))
 app.get('/address', (req,res)=> res.send('<h1>Gender: Male</h1>'))
 
-app.listen(port, ()=> console.log(`Example app listening at port ${port}`))
+app.listen(port, ()=> console.log(`Example app listening at http://localhost:${port}`))
