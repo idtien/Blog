@@ -1,8 +1,16 @@
-class NewsController {
+const Post = require('../models/Course')
+class SiteController {
 
     // [GET] /home
-    index(req, res) {
-        res.render('home')
+    async index(req, res) {
+        try {
+            const Posts = await Post.find({})
+            res.json(Posts)
+            // res.render('home')
+        } catch (error) {
+            console.log('error', error)
+        }
+        // res.render('home')
     }
 
     // [GET] /search
@@ -22,4 +30,4 @@ class NewsController {
 }
 
 
-module.exports = new NewsController
+module.exports = new SiteController
